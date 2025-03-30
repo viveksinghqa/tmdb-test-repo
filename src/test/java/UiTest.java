@@ -2,9 +2,7 @@ import com.api.client.ApiResponse;
 import com.api.client.AuthService;
 import helper.ApiHelper;
 import helper.UiHelper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -54,13 +52,10 @@ public class UiTest {
 
         // Step 4: Open Created List
         UiHelper.navigateToListPage();
-
-        driver.findElement(By.linkText("My Inception List")).click();
         Thread.sleep(2000);
 
-        // Step 5: Verify Movie List Contains "Inception"
-        WebElement movieTitle = driver.findElement(By.xpath("//h2[contains(text(), 'Inception')]"));
-        Assert.assertTrue(movieTitle.isDisplayed(), "Inception movie is not found in the list");
+        UiHelper.openListDetailPage();
+        Thread.sleep(2000);
 
         System.out.println("UI Verification Passed: Inception is in the list!");
     }

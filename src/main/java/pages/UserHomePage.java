@@ -9,7 +9,7 @@ public class UserHomePage {
 
     // Locators
     private By profileIcon = By.xpath("//span[@class = 'avatar background_color pink']");
-    private By listLink = By.xpath("//a[@href='/u/vivek.singh14/lists']");
+    private By listLink = By.xpath("//div[@class='k-child-animation-container']//a[@href='/u/vivek.singh14/lists']");
 
     // Constructor
     public UserHomePage() {

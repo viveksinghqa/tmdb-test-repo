@@ -4,6 +4,7 @@ import com.api.client.AuthService;
 import pages.LoginPage;
 import pages.TokenApprovalPage;
 import pages.UserHomePage;
+import pages.UserListPage;
 import utils.ConfigManager;
 
 public class UiHelper {
@@ -34,6 +35,11 @@ public class UiHelper {
 
         userHomePage.openUserList();
         Thread.sleep(3000);
+    }
+
+    public static void openListDetailPage(){
+        UserListPage userListPage = new UserListPage();
+        userListPage.openListDetailPage();
     }
 
 }
